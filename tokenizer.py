@@ -4,6 +4,10 @@ class Tokenizer(object):
 
         if(len(tags) > 1 ):
             tags = tags.replace(" ","")
-            result = tags.split(",")
+            tags = tags.split(",")
+            result= []
+            for element in tags:
+                if element != "," and element != "":
+                    result.append(element)
 
         return result

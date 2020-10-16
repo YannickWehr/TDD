@@ -55,3 +55,17 @@ def test_split_two_strings_result_array_of_two():
 
     #assert
     assert result == expResult
+
+def test_split_one_string_comma_result_array_of_one():
+    # arrange
+    stringToSplit = ",java"
+
+    expResult = ["java"]
+    result = None
+    cut = Tokenizer()
+
+    #act
+    result = cut.parse_string(stringToSplit)
+
+    #assert
+    assert result == expResult
