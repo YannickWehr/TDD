@@ -69,3 +69,31 @@ def test_split_one_string_comma_result_array_of_one():
 
     #assert
     assert result == expResult
+
+def test_split_one_string_comma_after_result_array_of_one():
+    # arrange
+    stringToSplit = "java,"
+
+    expResult = ["java"]
+    result = None
+    cut = Tokenizer()
+
+    #act
+    result = cut.parse_string(stringToSplit)
+
+    #assert
+    assert result == expResult
+
+def test_split_one_string_whitespace_result_array_of_one():
+    # arrange
+    stringToSplit = " java"
+
+    expResult = ["java"]
+    result = None
+    cut = Tokenizer()
+
+    #act
+    result = cut.parse_string(stringToSplit)
+
+    #assert
+    assert result == expResult
