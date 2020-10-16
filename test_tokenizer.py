@@ -97,3 +97,17 @@ def test_split_one_string_whitespace_result_array_of_one():
 
     #assert
     assert result == expResult
+
+def test_split_two_string_whitespaces_result_array_of_two():
+    # arrange
+    stringToSplit = "java byte code, python"
+
+    expResult = ["java byte code", "python"]
+    result = None
+    cut = Tokenizer()
+
+    #act
+    result = cut.parse_string(stringToSplit)
+
+    #assert
+    assert result == expResult

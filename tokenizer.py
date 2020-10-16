@@ -3,7 +3,8 @@ class Tokenizer(object):
         result = []
 
         if(len(tags) > 1 ):
-            tags = tags.replace(" ","")
+            tags = tags.replace(", ",",")
+            tags = tags.strip()
             tags = tags.split(",")
             result= []
             for element in tags:
